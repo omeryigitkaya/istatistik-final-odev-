@@ -1,7 +1,7 @@
 ---
-title: "Çalışmanızın Başlığı"
+title: "Türkiye’de COVID-19 pandemisinin toplumun mutluluğu üzerindeki etkisi"
 author: 
-  - İsim Soyisim[^1]
+  - Ömer Yiğit Kaya[^1]
 bibliography: ../bibliography/biblio.bib
 csl: ../csl/apa-tr.csl
 header-includes:
@@ -25,7 +25,7 @@ urlcolor: blue
 fontsize: 12pt
 biblio-style: apalike
 abstract: |
-  Bu bölümde çalışmanızın özetini yazınız.
+ Bu çalışmada, Covid-19 pandemisinin Türkiye'deki bireylerin mutluluk düzeyi üzerindeki etkisini incelemek amaçlanmıştır. Bu doğrultuda TÜİK'in Merkezi Dağıtım Sistemi'nden toplanan veri seti kullanılmıştır. Verilerin incelenmesi sırasında korelasyon analizi ve Dörtlü Korelasyon Katsayısı yöntemlerinin kullanılması planlanmıştır; ancak, verilerin işlenmesi sırasında yaşanan zorluklar nedeniyle bu yöntemlerle elde edilen sonuçlar tablolara aktarılamamıştır. Bu çalışma, Covid-19'un bireylerin mutluluk düzeyi üzerindeki etkisini istatistiksel bir perspektiften araştırmaktadır.
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
@@ -34,92 +34,54 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 <!-- ======================================================================= -->
 <!-- ============================== NOTLAR ================================= -->
 <!-- ======================================================================= -->
-[^1]: Öğrenci Numarası, [Github Repo](https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ)
-
-# Final Hakkında Önemli Bilgiler
-
-\colorbox{BurntOrange}{GITHUB REPO BAĞLANTINIZI BU DOSYANIN 37. SATIRINA YAZINIZ!}
-
-**Proje gönderimi, Github repo linki ile birlikte ekampus sistemine bir zip dosyası yüklenerek yapılacaktır. Sisteme zip dosyası yüklemezseniz ve Github repo linki vermezseniz ara sınav ve final sınavlarına girmemiş sayılırsınız.**
-
-**Proje klasörünüzü sıkıştırdıktan sonra (`OgrenciNumarasi.zip` dosyası) 9 Haziran 2023 23:59'a kadar *ekampus.ankara.edu.tr* adresine yüklemeniz gerekmektedir.**
-
-\colorbox{WildStrawberry}{Daha fazla bilgi için proje klasöründeki README.md dosyasını okuyunuz.}
+[^1]: 21080371, [Github Repo](https://github.com/omeryigitkaya/istatistik-final-odev-)
 
 # Giriş
-Bu taslak size proje ödevinizi yazarken yardımcı olması amacıyla oluşturulmuştur. Ödevlerinizde, makalelerinizde, sunumlarınızda ve projelerinizde kullandığınız tüm bilgi kaynaklarına atıfta bulunmalısınız. Alıntı ve gönderme yapmak okuyuculara çalışmanızda kullandığınız/başvurduğunuz  kaynaklara ulaşma imkanı sağlar. **Her ne kadar kendi sözlerinizi kullanıyor olsanız da, başkalarına ait fikirleri çalışmanızda aktarıyorsanız bu fikirlerin kaynağını belgelemek zorundasınız. Aksi takdirde akademik intihal yapmış olursunuz.** Yazım konusunda @aydinonat:2007'ye başvurabilirsiniz. 
+
+Covid-19, 2019 yılı sonunda Çin'in Wuhan kentinde ortaya çıkan ve kısa sürede tüm dünyaya yayılan yeni tip bir koronavirüs hastalığıdır. Dünya Sağlık Örgütü tarafından pandemi ilan edilen Covid-19, insan sağlığı, ekonomi, eğitim, sosyal hayat gibi pek çok alanda ciddi sorunlara neden olmuştur. Covid-19 salgını, bireylerin yaşam koşullarını, ruh sağlığını ve mutluluk düzeylerini de etkilemiştir.
+
+[@bakkeli2021health]'nin araştırmış olduğu **Norveç'te Covid-19 salgını öncesinde ve sırasında mutluluk düzeyi** isimli çalışmayı Türkiye'ye uyarlamak istedim.Bunun için başlangıçta [@karatacs2020covid] [@gungorer2020covid] [@ustun2020covid]'nin hazırlamış olduğu makaleleri okuyarak bilgi edindim daha sonrasında [@marzana2022community] detay bilgi ve bu konu hakkında doğru veriyi nereden toplayabilirim onu kavramaya çalıştım.
+
+Veri setini, genel mutluluk düzeyi, kişisel sağlıktan duyulan memnuniyet ve sosyal hayattan duyulan memnuniyet olacak şekilde, TÜİK'e ait **Merkezi Dağıtım Sisteminden** edindim.Veri setinde cinsiyet, memnuniyet düzeyi (çok mutlu, mutlu, orta, mutsuz, çok mutsuz) ve verinin toplandığı yıl(2018,2019,2020,2021,2022) gibi gözlemler bulunmaktadır.
+
+Covid-19 salgını ve onun yanında getirdiği tüm etkilerin, toplumun mutluluğu üzerindeki etkilerini incelemek için veri setinde yer alan 2018 ve 2019 verilerini Covid-19 **öncesi**, 2020 ve 2021 verilerini Covid-19 **sırası**, 2022 verisini ise Covid-19 **sonrası** olarak inceleyeceğim.
 
 
 Proje ödevinizde yer alan başlıkların bu metinde yer alan başlıkları kesinlikle içermesi gerekmektedir. Burada kullanılan başlıklar haricinde farklı alt başlıklar da kullanabilirsiniz. Projenizi yazarken bu dosyayı taslak olarak kullanıp içeriğini projenize uyarlayınız.
 
 ## Çalışmanın Amacı
-Bu bölümde yaptığınız çalışmanın amacından ve öneminden birkaç paragraf ile bahsediniz.
+
+Covid-19 salgını, tüm dünyada insanların yaşam koşullarını, ruh sağlığını ve mutluluk düzeylerini etkileyen önemli bir olaydır. Salgın nedeniyle bireylerin karşılaştıkları korku, belirsizlik, kısıtlama, yalnızlık, işsizlik, yoksulluk gibi olumsuz durumlar, depresyon, anksiyete, stres gibi psikolojik sorunlara yol açabilir. Bu da bireylerin yaşam doyumunu ve mutluluklarını azaltabilir. Bu nedenle salgının bireylerin mutluluk düzeyi üzerindeki etkisini araştırmak hem akademik hem de sosyal açıdan önemlidir.
+
+Bu çalışmanın amacı, Covid-19 salgınının Türkiye'deki bireylerin mutluluk düzeyi üzerindeki etkisini istatiksel olarak incelemektir. Bu amaçla bireylerin mutluluk düzeyleri ile kişisel sağlıktan duyulan memnuniyet ve sosyal hayattan duyulan memnuniyet arasındaki ilişki analiz edilecektir.
+
+Bu çalışmanın önemi, Covid-19 salgınının bireylerin mutluluk düzeyi üzerindeki etkisini ortaya koymasıdır.
 
 ## Literatür 
 
-Bu bölümde konu ile ilgili olarak okuduğunuz makaleleri referans vererek tartışınız. **Her makaleyi ayrı başlık altında tek tek özetlemeyiniz.** Literatür taramasında **en az altı** makaleye atıf yapılması ve bu makalelerden **en az ikisinin İngilizce** olması gerekmektedir.
+Öncelikle [@marzana2022community] makalesinden yola çıkarak Covid-19’un ilk yılının, yani Türkiye için 2020 yılının **balayı** aşaması olduğunu, bireylerin toplumdan soyutlanmaya adapte olmaya çalıştığını; 2021 yılının ise **depresif** tepkinin yüksek olduğu yıl olduğunu varsayıyoruz. Bu varsayımın doğruluğunu test etmek için veri setimizde genel mutluluk düzeyinin 2020 yılında 2021 yılından daha yüksek olması gerekiyor. [@bakkeli2021health] araştırmasına göre Norveç’te **kişisel sağlıktan duyulan memnuniyet** ile **genel mutluluk** düzeyi arasında negatif bir ilişki bulunmuş. [@gungorer2020covid] makalesi de Türkiye için bu sonucu doğruluyor. [@marzana2022community] çalışması gibi [@karatacs2020covid]'in çalışması da Covid-19’un etkilerinin ağır hissedildiği iki yılın ardından toplumun **genel mutluluk** düzeyinin arttığını ele alıyor.
 
 # Veri 
-Bu bölümde çalışmanızda kullandığınız veri setinin kaynağını, ham veri üzerinde herhangi bir işlem yaptıysanız bu işlemleri ve veri seti ile ilgili özet istatistikleri tartışınız. Bu bölümde tüm değişkenlere ait özet istatistikleri (ortalama, standart sapma, minimum, maksimum, vb. değerleri) içeren bir tablo (Tablo \ref{tab:ozet}) olması zorunludur. Tablolarınıza gerekli göndermeleri bir önceki cümlede gösterildiği gibi yapınız. [@perkins:1991]
 
-Analize ait R kodları bu bölümde başlamalıdır. Bu bölümde veri setini R'a aktaran ve özet istatistikleri üreten kodlar yer almalıdır.
-
-```{r}
-library(tidyverse)
-library(here)
-survey <- read_csv(here("../data/survey.csv"))
-```
-
-Rmd dosyasında kod bloklarının bazılarında kod seçeneklerinin düzenlendiğine dikkat edin. 
-
-```{r, echo=FALSE}
-library(xtable) 
-# devtools::install_github("emraher/summarytools")
-library(summarytools)
-st_options(lang = "tr")
-```
-
-`echo=FALSE` seçeneği ile kodların türetilen pdf dosyasında görünmesini engelleyin ve sonuçlarınızı tablo halinde rapor edin.
-
-```{r results='asis', echo=FALSE}
-survey %>%
-  select("sex", "credits", "handedness", "height", "handspan") %>% 
-  descr(stats = c("mean", "sd", "min", "med", "max"), transpose = TRUE) %>% 
-  xtable(caption = "Özet İstatistikler",
-         label = "tab:ozet",
-         align = c("l", "c", "c", "c", "c", "c")) %>% 
-  print(booktabs = TRUE, comment = FALSE, caption.placement = "top")
-```
-
+Bu çalışmada kullanılan veri seti, TÜİK'in **Merkezi Dağıtım Sistemi** üzerinden alınmıştır. Veri setindeki bazı bilgiler, CSV formatına uygun olması için sadeleştirilmiştir. Genel mutluluk kavramı, sosyal yaşamdan duyulan memnuniyet ve kişisel sağlıkla ilgili memnuniyet üzerinden değerlendirilmiştir.
 
 # Yöntem ve Veri Analizi
-Bu bölümde veri setindeki bilgileri kullanarak çalışmanın amacına ulaşmak için kullanılacak yöntemleri açıklayın. Derste işlenen/işlenecek olan analiz yöntemlerinden (Hipotez testleri ve korelasyon analizi gibi) çalışmanın amacına ve veri setine uygun olanlar bu bölümde kullanılmalıdır. [@newbold:2003; @ozsoy:2010; @ozsoy:2014]
 
-Örneğin, regresyon analizi gerçekleştiriyorsanız tahmin ettiğiniz denklemi bu bölümde tartışınız. Denklemlerinizi ve matematiksel ifadeleri $LaTeX$ kullanarak yazınız.
+[@bakkeli2021health] ve [@gungorer2020covid] çalışmalarında olduğu gibi ben de kendi çalışmamda korelasyon analizi ve Dörtlü Korelasyon Katsayısı yöntemlerini kullanmayı planladım. Covid-19 pandemisi sürecinde Türkiye'deki Covid-19 hasta sayısı ile toplumun genel refahı arasındaki korelasyonu belirlemek amaçlandı. Ancak, elde ettiğim verileri işlemekyemediğim için sonuçları tablolara yansıtamadım.
 
 $$
-Y_t = \beta_0 + \beta_N N_t + \beta_P P_t + \beta_I I_t + \varepsilon_t
+r_{xy} = \frac{\sum_{i=1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_{i} - \bar{x})^{2} (y_{i} - \bar{y})^{2}}}
 $$
-
-Bu bölümde analize ilişkin farklı tablolar ve grafiklere yer verilmelidir. Çalışmanıza uygun biçimde histogram, nokta grafiği (Şekil \@ref(fig:plot) gibi), kutu grafiği, vb. grafikleri bu bölüme ekleyiniz. Şekillerinize de gerekli göndermeleri bir önceki cümlede gösterildiği gibi yapınız.
-
-
-```{r plot, fig.align='center', fig.cap='Muhteşem Bir Grafik'}
-survey %>% 
-  ggplot(aes(x = handedness, y = handspan)) +
-  geom_point() +
-  geom_smooth() +
-  scale_x_continuous("Handedness") + 
-  scale_y_continuous("Handspan")
-```
-
-
+$$
+r_{\text{ff}} = \frac{(ad - bc)}{\sqrt{(a + b)(c + d)(a + c)(b + d)}}
+$$
 # Sonuç
-Bu bölümde çalışmanızın sonuçlarını özetleyiniz. Sonuçlarınızın başlangıçta belirlediğiniz araştırma sorusuna ne derece cevap verdiğini ve ileride bu çalışmanın nasıl geliştirilebileceğini tartışınız.
 
-**Kaynakça bölümü Rmarkdown tarafından otomatik olarak oluşturulmaktadır. Taslak dosyada Kaynakça kısmında herhangi bir değişikliğe gerek yoktur.** 
+Bu çalışmaya göre, **2020** yılında Covid-19 pandemisi genel mutluluk düzeyini ve kişisel sağlıktan duyulan memnuniyeti arttırırken, sosyal hayattan duyulan memnuniyeti azaltmıştır. **2021** yılında ise genel mutluluk düzeyi düşmüş; kişisel sağlıktan duyulan memnuniyet ve sosyal hayattan duyulan memnuniyet azalmıştır. Covid-19 pandemisi sonrası olarak değerlendirdiğimiz **2022** yılında genel mutluluk düzeyi yükselmiş; kişisel sağlıktan duyulan memnuniyet ve sosyal hayattan duyulan memnuniyet artmıştır. Bu değerler, Covid-19 pandemisi **öncesindeki değerlerin de üstüne çıkmıştır**.
+Bu çalışmada verilerin düzgün şekilde işlenememesi ve tablolara yansıtılamaması nedeniyle çalışma tamamlanamamıştır. Bu eksikliğin giderilmesi, çalışmayı daha anlamlı ve kapsamlı hale getirecektir.
 
-**_Taslakta bu cümleden sonra yer alan hiçbir şey silinmemelidir._**
+
+
 
 \newpage
 # Kaynakça {#references}
